@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    command: python index.py
+    environment:
+      FLASK_APP: index.py
+      FLASK_ENV: development
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./src:/myapp"
